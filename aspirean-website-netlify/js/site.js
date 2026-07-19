@@ -138,3 +138,11 @@
     });
   });
 })();
+
+(function(){
+  /* hide images that fail to load (replaces inline onerror, blocked by CSP) */
+  document.querySelectorAll("img[data-hide-on-error]").forEach(function (img) {
+    img.addEventListener("error", function () { img.style.display = "none"; });
+    if (img.complete && img.naturalWidth === 0) img.style.display = "none";
+  });
+})();
