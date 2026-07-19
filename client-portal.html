@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Portal | Aspirean Wealth</title>
+<meta name="description" content="Sign in to your Aspirean Wealth accounts: eMoney, Charles Schwab, Envestnet, and Flourish.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header header-dark">
+  <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
+    <span class="brand-mark">
+      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
+      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+    </span>
+    <span class="brand-words">
+      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
+      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+    </span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="perspectives.html">Perspectives</a>
+    <a href="about.html">About</a>
+    <a class="nav-cta" href="contact.html">Meet with us</a>
+    <a class="nav-portal" href="client-portal.html" aria-current="page">Client Portal</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero hero portal-hero">
+    <div class="hero-media">
+      <img src="assets/photo-tam-fog.jpg" alt="Fog rolling over a dark ridge of trees on Mount Tamalpais" fetchpriority="high">
+    </div>
+    <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(180deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.42) 45%, rgba(23,33,27,0.72) 100%);"></div>
+    <div class="wrap hero-inner portal-inner">
+      <div class="portal-content">
+        <p class="eyebrow" style="color: var(--paper); opacity: 0.92;">Client Portal</p>
+        <h1>Sign in to your accounts.</h1>
+        <p class="lead" style="max-width: 44ch;">Your plan, your custodian, and your cash all live behind their own doors. Choose where you&rsquo;re headed.</p>
+        <div class="portal-grid">
+          <a class="portal-card reveal" href="https://wealth.emaplan.com/ema/ria/buckinghamsp/legacyadvisorswealthmgmt" target="_blank" rel="noopener">
+            <span class="portal-logo"><img src="assets/logo-emoney.png" alt="eMoney"></span>
+            <span class="portal-name">Planning portal<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="portal-card portal-card--schwab reveal" href="https://www.schwaballiance.com" target="_blank" rel="noopener">
+            <span class="portal-logo"><img src="assets/logo-schwab.png" alt="Charles Schwab"></span>
+            <span class="portal-name">Accounts at Schwab<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="portal-card portal-card--fidelity reveal" href="https://www.fidelity.com" target="_blank" rel="noopener">
+            <span class="portal-logo"><img src="assets/logo-fidelity.png" alt="Fidelity"></span>
+            <span class="portal-name">Accounts at Fidelity<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="portal-card reveal" href="https://client.envestnet.com/FPAS/home" target="_blank" rel="noopener">
+            <span class="portal-logo"><img src="assets/logo-envestnet.png" alt="Envestnet"></span>
+            <span class="portal-name">Account performance reporting<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="portal-card reveal" href="https://www.flourish.com" target="_blank" rel="noopener">
+            <span class="portal-logo"><img src="assets/logo-flourish.png" alt="Flourish"></span>
+            <span class="portal-name">Cash management<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+        <p class="portal-help">Locked out or not sure which door? Call us at <a href="tel:+18446875342">(844) 687-5342</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
