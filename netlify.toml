@@ -1,6 +1,6 @@
 # Aspirean Wealth — Netlify configuration.
 # Static site, no build step; publish directory is this folder
-# (set as the Base directory in the Netlify dashboard).
+# (repo root; Base directory in Netlify must be empty).
 
 [build]
   publish = "."

@@ -136,12 +136,6 @@
   if (reduce || typeof gsap === "undefined") return;
   gsap.registerPlugin(ScrollTrigger);
 
-  /* the hero settles back as the page takes over */
-  gsap.to(".hero .hero-grid", {
-    yPercent: -10, autoAlpha: 0.35, ease: "none",
-    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom 55%", scrub: true }
-  });
-
   /* the headline arrives line by line, from behind its own baselines */
   var h1 = document.querySelector(".hero h1");
   if (h1 && h1.innerHTML.indexOf("<br") !== -1) {
