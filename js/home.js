@@ -33,7 +33,6 @@
   var modal = document.getElementById("team-modal");
   if (!track || !modal) return;
 
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lastFocus = null;
 
   function card(m, i) {
@@ -52,12 +51,6 @@
   }
 
   TEAM.forEach(function (m, i) { track.appendChild(card(m, i)); });
-  if (!reduce) TEAM.forEach(function (m, i) {
-    var c = card(m, i);
-    c.setAttribute("aria-hidden", "true");
-    c.setAttribute("tabindex", "-1");
-    track.appendChild(c);
-  });
 
   function openModal(m, trigger) {
     lastFocus = trigger;
@@ -156,6 +149,7 @@
   batch(".svc-index .svc", ".svc-index");
   batch(".expect-grid > div", ".expect-grid");
   batch(".steps-v .step-row", ".steps-v");
+  batch(".team-grid .team-card", ".team-grid");
 
   /* the visible cohort's questions arrive as one gesture on first view */
   var firstList = document.querySelector(".ppanel:not([hidden]) .wws-list");

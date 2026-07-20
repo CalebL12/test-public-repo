@@ -16,21 +16,14 @@
    on a photograph instead of a panel. */
 
 /* hero: broadsheet grid on the baseline */
-.hero-inner.hero-v3 .hero-grid { width: 100%; }
-.hero-grid {
-  display: grid; grid-template-columns: 7fr 5fr;
-  gap: clamp(36px, 5vw, 88px); align-items: end;
-}
-.hero-v3 h1 { font-size: clamp(2.75rem, 5vw, 4.6rem); letter-spacing: -0.015em; }
+/* hero: one reading gravity. Eyebrow, promise, lead, action in a single
+   column anchored lower-left; the path stays clear on the right. */
+.hero-copy { max-width: 640px; }
+.hero-v3 h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); letter-spacing: -0.015em; }
 .hero h1 .hl { display: block; overflow: hidden; }
 .hero h1 .hl-in { display: block; }
-.hero-deck { border-top: 1px solid rgba(246,245,238,0.4); padding-top: 24px; }
-.hero-deck .lead { margin: 0 0 32px; max-width: 40ch; font-size: 1.1875rem; }
-.hero-deck .hero-actions { margin-top: 0; }
-@media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hero-deck { border-top-color: rgba(246,245,238,0.28); }
-}
+.hero-copy .lead { margin: 26px 0 38px; max-width: 42ch; font-size: 1.15rem; }
+.hero-copy .hero-actions { margin-top: 0; }
 
 /* who we serve: the selector */
 .ptabs {
@@ -117,7 +110,7 @@
 .svc-index .svc h3 { font-size: 1.5rem; }
 @media (max-width: 900px) { .wwd-rail-photo { aspect-ratio: 4 / 3; } }
 
-/* expect: promises over a quiet partner line */
+/* expect: promises */
 .expect-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 56px); margin-top: var(--s-5);
@@ -125,14 +118,11 @@
 .expect-grid > div { border-top: 2px solid var(--sage); padding-top: 16px; }
 .expect-grid strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.25rem; color: var(--ink); margin-bottom: 8px; }
 .expect-grid span { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.55; }
-.partner-strip {
   margin-top: var(--s-6); padding-top: var(--s-4); border-top: 1px solid var(--rule);
   display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 5vw, 64px);
 }
-.partner-strip img { height: 24px; width: auto; filter: grayscale(1); opacity: 0.55; transition: filter 0.3s ease, opacity 0.3s ease; }
-.partner-strip img:hover { filter: grayscale(0); opacity: 1; }
 @media (max-width: 900px) { .expect-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 640px) { .expect-grid { grid-template-columns: 1fr; } .partner-strip img { height: 20px; } }
+@media (max-width: 640px) { .expect-grid { grid-template-columns: 1fr; } }
 
 /* how we work: the plan descends */
 .steps-v {
@@ -144,6 +134,16 @@
 .step-row h3 { font-size: 1.5rem; font-weight: 400; margin: 10px 0 10px; }
 .step-row p { color: var(--ink-soft); font-size: 0.9688rem; margin: 0; }
 @media (max-width: 900px) { .steps-v { grid-template-columns: 1fr; gap: var(--s-4); } }
+
+/* team: a still grid; people to look at, not a strip drifting by */
+.team-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 2.5vw, 34px); margin-top: var(--s-5);
+}
+.team-grid .team-card { width: auto; text-align: left; }
+.team-grid .team-photo { width: 100%; height: auto; aspect-ratio: 4 / 4.7; object-fit: cover; }
+@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .team-grid { gap: 16px; } }
 
 /* closing: a photograph, not a panel */
 .cta-photo { position: relative; background: var(--ink); overflow: hidden; }
@@ -186,19 +186,15 @@
     <div class="hero-media">
       <img src="assets/photo-walkway.jpg" alt="A railed walkway climbing a coastal ridge into the fog" fetchpriority="high" style="object-position: 62% 42%;">
     </div>
-    <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(90deg, rgba(23,33,27,0.42) 0%, rgba(23,33,27,0.06) 55%, rgba(23,33,27,0.18) 100%), linear-gradient(180deg, rgba(23,33,27,0.38) 0%, rgba(23,33,27,0.05) 32%, rgba(23,33,27,0.52) 66%, rgba(23,33,27,0.93) 100%);"></div>
+    <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(90deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.22) 44%, rgba(23,33,27,0) 80%), linear-gradient(180deg, rgba(23,33,27,0.32) 0%, rgba(23,33,27,0.04) 34%, rgba(23,33,27,0.42) 70%, rgba(23,33,27,0.9) 100%);"></div>
     <div class="wrap hero-inner hero-v3">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow" style="color: var(--paper); opacity: 0.92;">Fiduciary wealth management</p>
-          <h1>Wealth management<br>for the moment<br><em>everything</em> changes.</h1>
-        </div>
-        <div class="hero-deck">
-          <p class="lead">You sold the business. Your equity finally vested. You&rsquo;re suddenly the one holding it all together. We coordinate investment management, tax strategy, and estate planning for people meeting a major financial turning point.</p>
-          <div class="hero-actions">
-            <a class="btn btn-paper" href="contact.html">Meet with us</a>
-            <a class="link-quiet" style="color: var(--paper); border-color: rgba(246,245,238,0.5);" href="#how-we-work">How we work</a>
-          </div>
+      <div class="hero-copy">
+        <p class="eyebrow" style="color: var(--paper); opacity: 0.92;">Fiduciary wealth management</p>
+        <h1>For the moment<br><em>everything</em> changes.</h1>
+        <p class="lead">You sold the business. Your equity finally vested. You&rsquo;re suddenly the one holding it all together. We coordinate investment management, tax strategy, and estate planning for people meeting a major financial turning point.</p>
+        <div class="hero-actions">
+          <a class="btn btn-paper" href="contact.html">Meet with us</a>
+          <a class="link-quiet" style="color: var(--paper); border-color: rgba(246,245,238,0.5);" href="#how-we-work">How we work</a>
         </div>
       </div>
     </div>
@@ -406,13 +402,6 @@
         <div><strong>Sustainable investing options</strong><span>A portfolio that reflects your values without giving up performance.</span></div>
         <div><strong>Coordinated relationships</strong><span>We work directly with your attorneys and advisors, never in a silo.</span></div>
       </div>
-      <div class="partner-strip reveal" aria-label="Custodians and partners">
-        <img src="assets/logo-schwab.png" alt="Charles Schwab" loading="lazy">
-        <img src="assets/logo-fidelity.png" alt="Fidelity Investments" loading="lazy">
-        <img src="assets/logo-emoney.png" alt="eMoney" loading="lazy">
-        <img src="assets/logo-envestnet.png" alt="Envestnet" loading="lazy">
-        <img src="assets/logo-flourish.png" alt="Flourish" loading="lazy">
-      </div>
     </div>
   </section>
 
@@ -461,9 +450,8 @@
   <section class="section" id="team">
     <div class="wrap">
       <h2 class="reveal">Our team</h2>
-    </div>
-    <div class="team-band reveal" aria-label="The Aspirean team">
-      <div class="team-track" id="team-track"></div>
+      <div class="horizon" data-draw aria-hidden="true" style="margin-top: 26px;"></div>
+      <div class="team-grid" id="team-track" aria-label="The Aspirean team"></div>
     </div>
   </section>
 
