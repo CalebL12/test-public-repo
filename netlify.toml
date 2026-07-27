@@ -24,7 +24,9 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Assets revalidate on each visit (cheap 304s via Netlify etags), so
+# replaced images appear immediately after a deploy without cache confusion.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
