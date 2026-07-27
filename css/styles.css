@@ -680,6 +680,7 @@ details.persona[open] .cohort-more::after { transform: rotate(45deg); }
 @media (max-width: 900px) { .cost-grid--two { grid-template-columns: 1fr; } }
 
 /* compliance document links */
-.footer-compliance { display: flex; flex-wrap: wrap; gap: 8px 28px; padding: 0 clamp(24px, 5vw, 64px) 22px; }
+.footer-compliance { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 22px; }
+.footer-compliance[data-row] { flex-direction: row; justify-content: center; gap: 8px 28px; }
 .footer-compliance a { color: var(--paper-soft); font-size: 0.8125rem; text-decoration: none; border-bottom: 1px solid rgba(246,245,238,0.25); padding-bottom: 2px; }
 .footer-compliance a:hover { color: var(--paper); border-bottom-color: var(--sage); }
