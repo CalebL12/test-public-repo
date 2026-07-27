@@ -12,7 +12,7 @@
     { name: "Brad Alvarez", role: "COO | CCO | Principal", photo: "assets/team-brad-alvarez.jpg",
       bio: ["I began my career in financial services in 2005 after six years in the US Navy's nuclear field, where I was selected and certified as a command financial specialist on the submarine USS Michigan. What started as a personal interest in the rules of money became a passion for helping others who had not started thinking about it yet.",
             "At Aspirean I build, implement, and oversee the firm's internal systems, processes, and compliance requirements, and I support our advisors with portfolio design, research, and client education. I take great pride in our scientific priority to portfolio design: research, process, and time-tested data.",
-            "My wife Kristina and I share a dune-top home in Miller Beach, Indiana, near the beaches and trails of the Indiana Dunes National Park, with our many rescued four-legged children."] },
+            "My wife Kristina and I share a dune-top home in Miller Beach, Indiana, near the beaches and trails of the Indiana Dunes National Park."] },
     { name: "Marian Jung, CPA", role: "Wealth Manager | Senior Associate", photo: "assets/team-marian-jung.jpg",
       bio: ["To me, maintaining balance in one's life, not only financially but physically, emotionally, and spiritually, is essential. Clients are like family, so they always come first. I am a phone call away for immediate needs and big life changes, whether that means buying a house, starting a new job, or helping aging parents.",
             "I graduated from UC Berkeley with my degree in business and joined Arthur Andersen & Co., where I learned the intricacies of small businesses and how owners' business and personal objectives intertwine. I also carry a personal understanding of caring for aging parents, having managed the care and livelihood of my 99-year-old mother for years.",
@@ -27,7 +27,7 @@
             "He works alongside the firm's wealth managers across all three offices."] },
     { name: "Marcia Dinges", role: "Client Services Director", photo: "assets/team-marcia-dinges.jpg",
       bio: ["I have always loved helping people in any way that I can, and that passion translates directly into my work as client services director. I enjoy not only resolving our clients' challenges but getting to know each and every one of them personally.",
-            "I have worked in financial services for forty years, from banking to the investment field, and I hold a Series 7 securities license. I take care of the details so our clients' experience stays seamless, from account questions to executing requests efficiently and diligently.",
+            "I have worked in financial services for forty years, from banking to the investment field. I take care of the details so our clients' experience stays seamless, from account questions to executing requests efficiently and diligently.",
             "I live in Michigan and volunteer at our local hospital and the museum in my hometown of Three Oaks. I travel to the Atlanta area a few times each year to visit my son, daughter-in-law, and two granddaughters."] }
   ];
 
