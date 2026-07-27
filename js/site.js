@@ -47,7 +47,7 @@
         const done = document.createElement("div");
         done.className = "form-sent";
         done.setAttribute("role", "status");
-        done.textContent = "Thank you. A person, not a queue, will reply within two business days.";
+        done.textContent = "Thank you - you\u2019ll hear from us shortly.";
         form.replaceWith(done);
       } catch (err) {
         if (btn) btn.disabled = false;
