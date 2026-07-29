@@ -63,12 +63,33 @@
     document.getElementById("tm-bio").innerHTML = m.bio.map(function (p) { return "<p>" + p + "</p>"; }).join("");
     modal.hidden = false;
     document.body.classList.add("modal-open");
+    var reduceM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduceM && typeof gsap !== "undefined") {
+      gsap.fromTo(modal.querySelector(".team-modal-backdrop"),
+        { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out", clearProps: "opacity" });
+      gsap.fromTo(modal.querySelector(".team-modal-panel"),
+        { y: 26, opacity: 0, scale: 0.985 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", clearProps: "all" });
+    }
     modal.querySelector(".team-modal-close").focus();
   }
+  var closing = false;
   function closeModal() {
-    modal.hidden = true;
-    document.body.classList.remove("modal-open");
-    if (lastFocus) lastFocus.focus();
+    if (closing) return;
+    var finish = function () {
+      closing = false;
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+      if (lastFocus) lastFocus.focus();
+    };
+    var reduceM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduceM && typeof gsap !== "undefined") {
+      closing = true;
+      gsap.to(modal.querySelector(".team-modal-panel"),
+        { y: 14, opacity: 0, duration: 0.22, ease: "power1.in", clearProps: "all", onComplete: finish });
+      gsap.to(modal.querySelector(".team-modal-backdrop"),
+        { opacity: 0, duration: 0.22, ease: "power1.in", clearProps: "opacity" });
+    } else { finish(); }
   }
   modal.addEventListener("click", function (e) { if (e.target.hasAttribute("data-close")) closeModal(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
