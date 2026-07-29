@@ -684,3 +684,9 @@ details.persona[open] .cohort-more::after { transform: rotate(45deg); }
 .footer-compliance[data-row] { flex-direction: row; justify-content: center; gap: 8px 28px; }
 .footer-compliance a { color: var(--paper-soft); font-size: 0.8125rem; text-decoration: none; border-bottom: 1px solid rgba(246,245,238,0.25); padding-bottom: 2px; }
 .footer-compliance a:hover { color: var(--paper); border-bottom-color: var(--sage); }
+
+/* compliance footnote references; footnotes live in the Firm Disclosure document */
+.fn-ref { font-size: 0.62em; line-height: 0; vertical-align: super; margin-left: 2px; opacity: 0.75; font-family: var(--sans); font-style: normal; }
+
+/* global risk disclosure, footer */
+.footer-risk { font-size: 0.72rem; color: var(--paper-soft); opacity: 0.7; margin: 0; padding: 0 clamp(24px, 5vw, 64px) 16px; }
