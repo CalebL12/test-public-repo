@@ -690,3 +690,7 @@ details.persona[open] .cohort-more::after { transform: rotate(45deg); }
 
 /* global risk disclosure, footer */
 .footer-risk { font-size: 0.72rem; color: var(--paper-soft); opacity: 0.7; margin: 0; padding: 0 clamp(24px, 5vw, 64px) 16px; }
+
+.footer-legal { opacity: 0.55; font-size: 0.6875rem; line-height: 1.55; padding-top: 0; }
+a.fn-link { text-decoration: none; color: inherit; }
+a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
