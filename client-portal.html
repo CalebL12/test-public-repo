@@ -20,6 +20,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0735ZEKVJJ"></script>
 <script src="js/analytics.js"></script>
+<link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/photo-tam-fog-800.webp 800w, assets/photo-tam-fog-1400.webp 1400w, assets/photo-tam-fog-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -27,12 +30,12 @@
 <header class="site-header header-dark">
   <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
     <span class="brand-mark">
-      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
-      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+      <img width="896" height="1344" class="mk-paper" src="assets/logo-mark-paper.webp" alt="Aspirean Wealth">
+      <img width="896" height="1344" class="mk-sage" src="assets/logo-mark-sage.webp" alt="">
     </span>
     <span class="brand-words">
-      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
-      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+      <img width="1568" height="252" class="ww-paper" src="assets/logo-wordmark-paper.webp" alt="">
+      <img width="1568" height="252" class="ww-ink" src="assets/logo-wordmark-ink.webp" alt="">
     </span>
   </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -47,7 +50,7 @@
 <main>
   <section class="page-hero hero portal-hero">
     <div class="hero-media">
-      <img src="assets/photo-tam-fog.jpg" alt="Fog rolling over a dark ridge of trees on Mount Tamalpais" fetchpriority="high">
+      <img width="3400" height="1910" src="assets/photo-tam-fog-2400.webp" srcset="assets/photo-tam-fog-800.webp 800w, assets/photo-tam-fog-1400.webp 1400w, assets/photo-tam-fog-2400.webp 2400w" sizes="100vw" alt="Fog rolling over a dark ridge of trees on Mount Tamalpais" fetchpriority="high">
     </div>
     <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(180deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.42) 45%, rgba(23,33,27,0.72) 100%);"></div>
     <div class="wrap hero-inner portal-inner">
@@ -57,23 +60,23 @@
         <p class="lead" style="max-width: 44ch;">Your plan, your custodian, and your cash all live on their own domains.</p>
         <div class="portal-grid">
           <a class="portal-card reveal" href="https://wealth.emaplan.com/ema/ria/buckinghamsp/legacyadvisorswealthmgmt" target="_blank" rel="noopener">
-            <span class="portal-logo"><img src="assets/logo-emoney.png" alt="eMoney"></span>
+            <span class="portal-logo"><img width="640" height="174" src="assets/logo-emoney.webp" alt="eMoney"></span>
             <span class="portal-name">Planning portal<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="portal-card portal-card--schwab reveal" href="https://www.schwaballiance.com" target="_blank" rel="noopener">
-            <span class="portal-logo"><img src="assets/logo-schwab.png" alt="Charles Schwab"></span>
+            <span class="portal-logo"><img width="500" height="256" src="assets/logo-schwab.webp" alt="Charles Schwab"></span>
             <span class="portal-name">Accounts at Schwab<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="portal-card portal-card--fidelity reveal" href="https://www.fidelity.com" target="_blank" rel="noopener">
-            <span class="portal-logo"><img src="assets/logo-fidelity.png" alt="Fidelity"></span>
+            <span class="portal-logo"><img width="640" height="138" src="assets/logo-fidelity.webp" alt="Fidelity"></span>
             <span class="portal-name">Accounts at Fidelity<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="portal-card reveal" href="https://client.envestnet.com/FPAS/home" target="_blank" rel="noopener">
-            <span class="portal-logo"><img src="assets/logo-envestnet.png" alt="Envestnet"></span>
+            <span class="portal-logo"><img width="640" height="194" src="assets/logo-envestnet.webp" alt="Envestnet"></span>
             <span class="portal-name">Performance reporting<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="portal-card reveal" href="https://www.flourish.com" target="_blank" rel="noopener">
-            <span class="portal-logo"><img src="assets/logo-flourish.png" alt="Flourish"></span>
+            <span class="portal-logo"><img width="640" height="152" src="assets/logo-flourish.webp" alt="Flourish"></span>
             <span class="portal-name">Cash management<span class="portal-arrow" aria-hidden="true">&rarr;</span></span>
           </a>
         </div>

@@ -19,19 +19,55 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0735ZEKVJJ"></script>
 <script src="js/analytics.js"></script>
+<link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/photo-headlands-800.webp 800w, assets/photo-headlands-1400.webp 1400w, assets/photo-headlands-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://aspirean.com/financial-advisors-marin.html#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Do you have a minimum asset level?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We best serve individuals with at least $1 million in investable assets, including 401(k) plan assets, or more complex financial situations. Our minimum annual fee is $7,500 for clients below that threshold."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How are you compensated?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We are a fee-only Registered Investment Advisor and a fiduciary, paid via a percentage of the assets we manage."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you work with clients outside Marin County?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We serve clients nationally, with additional offices in St. Joseph, MI, and Chesterton, IN."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
 <header class="site-header header-dark">
   <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
     <span class="brand-mark">
-      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
-      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+      <img width="896" height="1344" class="mk-paper" src="assets/logo-mark-paper.webp" alt="Aspirean Wealth">
+      <img width="896" height="1344" class="mk-sage" src="assets/logo-mark-sage.webp" alt="">
     </span>
     <span class="brand-words">
-      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
-      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+      <img width="1568" height="252" class="ww-paper" src="assets/logo-wordmark-paper.webp" alt="">
+      <img width="1568" height="252" class="ww-ink" src="assets/logo-wordmark-ink.webp" alt="">
     </span>
   </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -46,7 +82,7 @@
 <main>
   <section class="page-hero hero">
     <div class="hero-media">
-      <img src="assets/photo-headlands.jpg" alt="The Marin Headlands coastline winding above the Pacific" fetchpriority="high" style="object-position: center 58%;" data-hide-on-error>
+      <img width="2400" height="1738" src="assets/photo-headlands-2400.webp" srcset="assets/photo-headlands-800.webp 800w, assets/photo-headlands-1400.webp 1400w, assets/photo-headlands-2400.webp 2400w" sizes="100vw" alt="The Marin Headlands coastline winding above the Pacific" fetchpriority="high" style="object-position: center 58%;" data-hide-on-error>
     </div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="wrap hero-inner">
@@ -105,7 +141,7 @@
 <footer class="site-footer on-ink">
   <div class="footer-grid">
     <div class="footer-col">
-      <img src="assets/logo-wordmark-paper.png" alt="Aspirean Wealth">
+      <img width="1568" height="252" src="assets/logo-wordmark-paper.webp" alt="Aspirean Wealth">
       <p style="margin-top: 18px; max-width: 32ch;">Fee-only, fiduciary wealth management for first-generation wealth creators.<sup class="fn-ref">1</sup></p>
       <div class="footer-compliance">
         <a href="/documents/Aspirean-Form_CRS_2026.pdf" target="_blank" rel="noopener">Form CRS</a>
