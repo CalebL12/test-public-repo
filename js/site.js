@@ -74,6 +74,16 @@
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
+
+    /* landing on a #hash (e.g. index.html#team): re-settle after images
+       load and Lenis takes over, so the anchor position holds */
+    if (location.hash) {
+      const settle = () => {
+        const t = document.querySelector(location.hash);
+        if (t) lenis.scrollTo(t, { immediate: true, offset: -92 });
+      };
+      window.addEventListener("load", () => setTimeout(settle, 300), { once: true });
+    }
   }
 
   /* hero: one choreographed arrival + slow Ken Burns drift */
