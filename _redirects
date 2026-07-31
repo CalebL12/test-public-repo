@@ -1,0 +1,14 @@
+# Aspirean Wealth — redirect map
+# Order matters: first match wins. Specific legacy mappings go ABOVE the
+# catch-alls. 301 = permanent (passes SEO equity to the new URL).
+
+# --- domain consolidation: one canonical home ---
+https://test-public-repo.netlify.app/* https://aspirean.com/:splat 301!
+https://www.aspirean.com/*             https://aspirean.com/:splat 301!
+
+# --- legacy blog: specific mappings (populate from the legacy URL list) ---
+# /blog/old-post-slug   /perspectives/new-post-slug.html   301
+
+# --- legacy blog: catch-all so nothing 404s ---
+/blog     /perspectives.html   301
+/blog/*   /perspectives.html   301
