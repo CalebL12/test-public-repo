@@ -140,16 +140,6 @@
 .step-row p { color: var(--ink-soft); font-size: 0.9688rem; margin: 0; }
 @media (max-width: 900px) { .steps-v { grid-template-columns: 1fr; gap: var(--s-4); } }
 
-/* team: a still grid; people to look at, not a strip drifting by */
-.team-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: clamp(20px, 2.5vw, 34px); margin-top: var(--s-5);
-}
-.team-grid .team-card { width: auto; text-align: left; }
-.team-grid .team-photo { width: 100%; height: auto; aspect-ratio: 4 / 4.7; object-fit: cover; }
-@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .team-grid { gap: 16px; } }
-
 /* closing: a photograph, not a panel */
 .cta-photo { position: relative; background: var(--ink); overflow: hidden; }
 .cta-photo .cta-media { position: absolute; inset: 0; }
@@ -178,7 +168,8 @@
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav class="nav" id="nav" aria-label="Primary">
     <a href="perspectives.html">Perspectives</a>
-    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+      <a href="about.html">About</a>
     <a class="nav-cta" href="contact.html">Meet with us</a>
     <a class="nav-portal" href="client-portal.html">Client Portals</a>
   </nav>
@@ -455,8 +446,45 @@
   <section class="section" id="team">
     <div class="wrap">
       <h2 class="reveal">Our team</h2>
+      <a class="link-quiet reveal" href="team.html" style="margin-top: 10px; display: inline-block;">Meet the full team</a>
       <div class="horizon" data-draw aria-hidden="true" style="margin-top: 26px;"></div>
-      <div class="team-grid" id="team-track" aria-label="The Aspirean team"></div>
+      <div class="team-grid" aria-label="The Aspirean team">
+      <a class="team-card" href="team/chris-winkler.html">
+        <img class="team-photo" src="assets/team-chris-winkler.jpg" alt="Portrait of Chris Winkler, Founder, Principal at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Chris Winkler</p>
+        <p class="team-role">Founder | Principal</p>
+      </a>
+      <a class="team-card" href="team/paul-grace.html">
+        <img class="team-photo" src="assets/team-paul-grace.jpg" alt="Portrait of Paul Grace, Founder, Wealth Manager at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Paul Grace</p>
+        <p class="team-role">Founder | Wealth Manager</p>
+      </a>
+      <a class="team-card" href="team/brad-alvarez.html">
+        <img class="team-photo" src="assets/team-brad-alvarez.jpg" alt="Portrait of Brad Alvarez, COO, CCO, Principal at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Brad Alvarez</p>
+        <p class="team-role">COO | CCO | Principal</p>
+      </a>
+      <a class="team-card" href="team/marian-jung.html">
+        <img class="team-photo" src="assets/team-marian-jung.jpg" alt="Portrait of Marian Jung, CPA, Wealth Manager, Senior Associate at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Marian Jung, CPA</p>
+        <p class="team-role">Wealth Manager | Senior Associate</p>
+      </a>
+      <a class="team-card" href="team/kevin-ostafinski.html">
+        <img class="team-photo" src="assets/team-kevin-ostafinski.jpg" alt="Portrait of Kevin Ostafinski, Advanced Planning Lead at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Kevin Ostafinski</p>
+        <p class="team-role">Advanced Planning Lead</p>
+      </a>
+      <a class="team-card" href="team/caleb-luis.html">
+        <img class="team-photo" src="assets/team-caleb-luis.jpg" alt="Portrait of Caleb Luis, Associate Advisor at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Caleb Luis</p>
+        <p class="team-role">Associate Advisor</p>
+      </a>
+      <a class="team-card" href="team/marcia-dinges.html">
+        <img class="team-photo" src="assets/team-marcia-dinges.jpg" alt="Portrait of Marcia Dinges, Client Services Director at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Marcia Dinges</p>
+        <p class="team-role">Client Services Director</p>
+      </a>
+      </div>
     </div>
   </section>
 
@@ -539,21 +567,6 @@
       </div>
     </div>
   </div>
-
-
-<!-- TEAM MODAL -->
-<div class="team-modal" id="team-modal" hidden>
-  <div class="team-modal-backdrop" data-close></div>
-  <div class="team-modal-panel" role="dialog" aria-modal="true" aria-labelledby="tm-name">
-    <button class="team-modal-close" data-close aria-label="Close bio">&times;</button>
-    <img class="tm-photo" id="tm-photo" alt="">
-    <div class="tm-body">
-      <h3 id="tm-name"></h3>
-      <p class="tm-role" id="tm-role"></p>
-      <div class="tm-bio" id="tm-bio"></div>
-    </div>
-  </div>
-</div>
 
 <footer class="site-footer on-ink">
   <div class="footer-grid">

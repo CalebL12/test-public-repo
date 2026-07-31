@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Team | Aspirean Wealth</title>
+<meta name="description" content="The advisors and team at Aspirean Wealth: fiduciary wealth managers serving founders, executives, and family stewards from Mill Valley, St. Joseph, and Chesterton.">
+<link rel="canonical" href="https://aspirean.com/team.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0735ZEKVJJ"></script>
+<script src="js/analytics.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ---------- perspectives: the reading room, v3 ----------
+   Calm hero, then chaptered reading: each category title is sticky
+   and travels with you while its questions scroll past. */
+
+.px-hero { position: relative; background: var(--ink); margin-top: -78px; overflow: hidden; }
+.px-hero-inner { position: relative; z-index: 1; min-height: min(64vh, 620px); display: flex; align-items: flex-end; padding-top: 160px; padding-bottom: 96px; }
+.px-hero h1 { font-size: var(--step-4); color: var(--paper); letter-spacing: -0.01em; max-width: 14ch; }
+.px-hero h1 em { font-style: italic; color: var(--sage-glow); }
+.px-hero .lead { font-size: var(--step-1); line-height: 1.5; color: var(--paper-soft); max-width: 44ch; margin: 26px 0 0; }
+
+/* the quiet signature: noise resolving into signal, drawn once */
+.px-signal { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none; }
+.px-signal svg { width: 100%; height: 100%; display: block; }
+.px-signal path { fill: none; stroke: var(--sage-glow); stroke-width: 1.5; opacity: 0.9; }
+
+/* intro line above the chapters */
+.px-intro { margin-bottom: var(--s-6); }
+.px-intro .px-note { color: var(--ink-mid); font-size: 0.9063rem; margin: 0; max-width: 44ch; }
+
+/* chapters: sticky category rail left, questions right */
+.px-chapter { border-top: 1px solid var(--rule); padding: var(--s-6) 0; display: grid; grid-template-columns: minmax(260px, 4fr) 8fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+.px-chapter:last-of-type { border-bottom: 1px solid var(--rule); }
+.px-chapter-rail { position: sticky; top: 110px; }
+.px-ch-n { font-family: var(--serif); font-weight: 300; font-size: 2rem; color: var(--sage-deep); line-height: 1; display: block; margin-bottom: 14px; }
+.px-chapter-rail h2 { font-size: var(--step-3); font-weight: 400; margin: 0 0 16px; letter-spacing: -0.005em; max-width: 14ch; }
+.px-chapter-rail h2 a { color: var(--ink); text-decoration: none; transition: color 0.2s ease; }
+.px-chapter-rail h2 a:hover { color: var(--sage-deep); }
+.px-chapter-rail h2 a:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+.px-chapter-rail .px-desc { color: var(--ink-soft); font-size: 0.9688rem; max-width: 34ch; margin: 0 0 22px; }
+.px-chapter-rail .link-quiet { font-size: 0.9063rem; }
+
+/* entries: numbered like a table of contents */
+.px-entry {
+  position: relative;
+  display: grid; grid-template-columns: 84px 1fr 34px; gap: 20px; align-items: baseline;
+  padding: 30px 0; text-decoration: none; border-top: 1px solid var(--rule);
+}
+.px-entry:first-of-type { border-top: 0; padding-top: 6px; }
+.px-entry::before {
+  content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 1px;
+  background: var(--sage); transform: scaleX(0); transform-origin: left center;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.px-entry:first-of-type::before { display: none; }
+.px-entry:hover::before, .px-entry:focus-visible::before { transform: scaleX(1); }
+.px-entry:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+.px-n { font-family: var(--serif); font-weight: 300; font-size: 1.5rem; color: var(--ink-faint); transition: color 0.25s ease; }
+.px-n::before { content: "No. "; font-size: 0.8125rem; letter-spacing: 0.08em; }
+.px-entry:hover .px-n { color: var(--sage-deep); }
+.px-q { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.375rem, 2.2vw, 1.75rem); line-height: 1.3; color: var(--ink); transition: color 0.25s ease; }
+.px-entry:hover .px-q { color: var(--sage-deep); }
+.px-meta { display: block; margin-top: 8px; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mid); }
+.px-arrow { color: var(--sage-deep); font-family: var(--sans); font-size: 1.05rem; transform: translateX(-6px); opacity: 0; transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease; }
+.px-entry:hover .px-arrow, .px-entry:focus-visible .px-arrow { transform: translateX(0); opacity: 1; }
+
+/* request band */
+.px-request { margin-top: var(--s-7); display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; }
+.px-request p { font-family: var(--serif); font-weight: 300; font-size: var(--step-2); line-height: 1.3; color: var(--ink); margin: 0; max-width: 24ch; }
+
+@media (max-width: 900px) {
+  .px-chapter { grid-template-columns: 1fr; gap: var(--s-3); }
+  .px-chapter-rail { position: static; }
+  .px-chapter-rail .px-desc { max-width: none; }
+  .px-entry { grid-template-columns: 64px 1fr; }
+  .px-arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .px-entry::before, .px-arrow { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header header-dark">
+  <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
+    <span class="brand-mark">
+      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
+      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+    </span>
+    <span class="brand-words">
+      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
+      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+    </span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="perspectives.html">Perspectives</a>
+    <a href="team.html">Team</a>
+      <a href="about.html">About</a>
+    <a class="nav-cta" href="contact.html">Meet with us</a>
+    <a class="nav-portal" href="client-portal.html">Client Portals</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow" style="color: var(--paper); opacity: 0.92;">Our team</p>
+        <h1>The people you&rsquo;ll work with.</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="team-grid">
+        <a class="team-card" href="team/chris-winkler.html">
+          <img class="team-photo" src="assets/team-chris-winkler.jpg" alt="Portrait of Chris Winkler, Founder, Principal at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Chris Winkler</p>
+          <p class="team-role">Founder | Principal</p>
+        </a>
+        <a class="team-card" href="team/paul-grace.html">
+          <img class="team-photo" src="assets/team-paul-grace.jpg" alt="Portrait of Paul Grace, Founder, Wealth Manager at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Paul Grace</p>
+          <p class="team-role">Founder | Wealth Manager</p>
+        </a>
+        <a class="team-card" href="team/brad-alvarez.html">
+          <img class="team-photo" src="assets/team-brad-alvarez.jpg" alt="Portrait of Brad Alvarez, COO, CCO, Principal at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Brad Alvarez</p>
+          <p class="team-role">COO | CCO | Principal</p>
+        </a>
+        <a class="team-card" href="team/marian-jung.html">
+          <img class="team-photo" src="assets/team-marian-jung.jpg" alt="Portrait of Marian Jung, CPA, Wealth Manager, Senior Associate at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Marian Jung, CPA</p>
+          <p class="team-role">Wealth Manager | Senior Associate</p>
+        </a>
+        <a class="team-card" href="team/kevin-ostafinski.html">
+          <img class="team-photo" src="assets/team-kevin-ostafinski.jpg" alt="Portrait of Kevin Ostafinski, Advanced Planning Lead at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Kevin Ostafinski</p>
+          <p class="team-role">Advanced Planning Lead</p>
+        </a>
+        <a class="team-card" href="team/caleb-luis.html">
+          <img class="team-photo" src="assets/team-caleb-luis.jpg" alt="Portrait of Caleb Luis, Associate Advisor at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Caleb Luis</p>
+          <p class="team-role">Associate Advisor</p>
+        </a>
+        <a class="team-card" href="team/marcia-dinges.html">
+          <img class="team-photo" src="assets/team-marcia-dinges.jpg" alt="Portrait of Marcia Dinges, Client Services Director at Aspirean Wealth" loading="lazy">
+          <p class="team-name">Marcia Dinges</p>
+          <p class="team-role">Client Services Director</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- OFFICES (compact) -->
+  <div class="offices-mini">
+    <div class="offices-mini-grid">
+      <div>
+        <h3>Mill Valley, CA</h3>
+        <p>6 Knoll Lane, Suite B, Mill Valley, CA 94941<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+      <div>
+        <h3>St. Joseph, MI</h3>
+        <p>505 Pleasant St, Suite 401, St. Joseph, MI 49085<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+      <div>
+        <h3>Chesterton, IN</h3>
+        <p>160 Rail Rd, Suite 4, Chesterton, IN 46304<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="site-footer on-ink">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="assets/logo-wordmark-paper.png" alt="Aspirean Wealth">
+      <p style="margin-top: 18px; max-width: 32ch;">Fee-only, fiduciary wealth management for first-generation wealth creators.<sup class="fn-ref">1</sup></p>
+      <div class="footer-compliance">
+        <a href="/documents/Aspirean-Form_CRS_2026.pdf" target="_blank" rel="noopener">Form CRS</a>
+        <a href="/documents/Aspirean-Privacy-Policy-2025.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="/documents/Aspirean-Firm-Disclosures-2026.pdf" target="_blank" rel="noopener">Firm Disclosure</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Firm</h4>
+      <a href="index.html#what-we-do">What we do</a>
+      <a href="index.html#who-we-serve">Who we serve</a>
+      <a href="index.html#how-we-work">How we work</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wealth Management</h4>
+      <a href="wealth-management-marin.html">Marin County, CA</a>
+      <a href="wealth-management-st-joseph.html">St. Joseph, MI</a>
+      <a href="wealth-management-chesterton.html">Chesterton, IN</a>
+    </div>
+    <div class="footer-col">
+      <h4>Financial Advisors</h4>
+      <a href="financial-advisors-marin.html">Marin County, CA</a>
+      <a href="financial-advisors-st-joseph.html">St. Joseph, MI</a>
+      <a href="financial-advisors-chesterton.html">Chesterton, IN</a>
+    </div>
+  </div>
+  <p class="footer-risk">No investment strategy can guarantee success or eliminate the risk of loss.</p>
+  <p class="footer-risk footer-legal">All investing involves risk, including the possible loss of principal. Aspirean Wealth LLC is an SEC-registered investment adviser. Registration does not imply a certain level of skill or training. The information contained on this website is provided for informational purposes only and should not be construed as personalized investment, tax, legal, or accounting advice. Advisory services are only offered to clients pursuant to a written advisory agreement. Past performance does not guarantee future results.</p>
+  <div class="footer-line">
+    <p>Independent. Fiduciary. Fee-only.</p>
+    <p>&copy; 2026 Aspirean Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/perspectives.js"></script>
+</body>
+</html>

@@ -694,3 +694,14 @@ details.persona[open] .cohort-more::after { transform: rotate(45deg); }
 .footer-legal { opacity: 0.55; font-size: 0.6875rem; line-height: 1.55; padding-top: 0; }
 a.fn-link { text-decoration: none; color: inherit; }
 a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
+
+/* team grid (home + team pages) */
+.team-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 2.5vw, 34px); margin-top: var(--s-5);
+}
+.team-grid .team-card { width: auto; text-align: left; }
+.team-grid .team-photo { width: 100%; height: auto; aspect-ratio: 4 / 4.7; object-fit: cover; }
+@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .team-grid { gap: 16px; } }
+.team-grid a.team-card { display: block; text-decoration: none; }
