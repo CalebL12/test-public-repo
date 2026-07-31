@@ -1,4 +1,21 @@
+# Aspirean Wealth - crawler policy
+# Decision (July 30, 2026): the firm wants its educational content
+# discoverable and citable in AI answer engines. AI crawlers below are
+# expressly allowed. Revisit alongside compliance review if policy changes.
+
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://aspirean.com/sitemap.xml
