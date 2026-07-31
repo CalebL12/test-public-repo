@@ -19,6 +19,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0735ZEKVJJ"></script>
 <script src="js/analytics.js"></script>
+<link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/photo-hero-path-800.webp 800w, assets/photo-hero-path-1400.webp 1400w, assets/photo-hero-path-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 /* ---------- homepage layout: v3 ----------
@@ -161,18 +164,118 @@
 .cta-photo .prose { margin: 0 0 26px; max-width: 48ch; color: var(--paper-soft); }
 @media (max-width: 900px) { .cta-grid { grid-template-columns: 1fr; gap: 26px; } }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Organization",
+    "FinancialService"
+   ],
+   "@id": "https://aspirean.com/#organization",
+   "name": "Aspirean Wealth",
+   "legalName": "Aspirean Wealth, LLC",
+   "url": "https://aspirean.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://aspirean.com/assets/logo-wordmark-ink.png",
+    "width": 1568,
+    "height": 252
+   },
+   "image": "https://aspirean.com/assets/og-image.jpg",
+   "telephone": "(844) 687-5342",
+   "foundingDate": "2014",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Knoll Lane, Suite B",
+    "addressLocality": "Mill Valley",
+    "addressRegion": "CA",
+    "postalCode": "94941",
+    "addressCountry": "US"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/company/aspirean-wealth/",
+    "https://adviserinfo.sec.gov/firm/summary/173138"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aspirean.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How are you paid?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We’re a fee-only Registered Investment Advisor and a fiduciary, paid a percentage of the assets we manage. No commissions, no product sales, no undisclosed revenue. The planning, tax, and estate work is part of the relationship, not an add-on with its own invoice."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you have a minimum?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Given the time-intensive, comprehensive nature of our work, we best serve individuals with at least $1 million in investable assets."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does my money actually live?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At independent custodians, Charles Schwab and Fidelity, in accounts that stay in your name. We’re your advisor with limited authority to manage them, and we don’t work for the custodian. You can see everything, always."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How would you describe your investment strategy?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evidence-based, guided by decades of objective, peer-reviewed financial research and supported by our partnership with Focus Financial. We help you manage what’s actually within your control (cost, diversification, and discipline) rather than react to headlines."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you handle taxes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We do tax planning and strategy. It lives inside your financial plan year-round, led in-house by credentialed expertise, and we work directly with the CPA who files your returns so the plan and the paperwork never drift apart."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens after the first conversation?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We listen first: your goals, your family, what you want the money to do. If we both want to continue, we build one coordinated plan across investments, tax, and estate strategy, then meet on a rhythm that fits your life. And it all begins with a conversation we’d love the opportunity to have."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are you the right fit for us?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We hope so, though we’re not for everyone. If you want a coordinated plan and a partner who takes financial complexity off your plate, we’d like to talk. If you’re looking for ad hoc stock tips, we’re not the right fit."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
 <header class="site-header header-dark">
   <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
     <span class="brand-mark">
-      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
-      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+      <img width="896" height="1344" class="mk-paper" src="assets/logo-mark-paper.webp" alt="Aspirean Wealth">
+      <img width="896" height="1344" class="mk-sage" src="assets/logo-mark-sage.webp" alt="">
     </span>
     <span class="brand-words">
-      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
-      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+      <img width="1568" height="252" class="ww-paper" src="assets/logo-wordmark-paper.webp" alt="">
+      <img width="1568" height="252" class="ww-ink" src="assets/logo-wordmark-ink.webp" alt="">
     </span>
   </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -189,7 +292,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-media">
-      <img src="assets/photo-hero-path.jpg" alt="A railed walkway climbing a coastal ridge into the fog" fetchpriority="high" style="object-position: 60% 45%;">
+      <img width="3200" height="2654" src="assets/photo-hero-path-2400.webp" srcset="assets/photo-hero-path-800.webp 800w, assets/photo-hero-path-1400.webp 1400w, assets/photo-hero-path-2400.webp 2400w" sizes="100vw" alt="A railed walkway climbing a coastal ridge into the fog" fetchpriority="high" style="object-position: 60% 45%;">
     </div>
     <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(90deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.22) 44%, rgba(23,33,27,0) 80%), linear-gradient(180deg, rgba(23,33,27,0.32) 0%, rgba(23,33,27,0.04) 34%, rgba(23,33,27,0.42) 70%, rgba(23,33,27,0.9) 100%);"></div>
     <div class="wrap hero-inner hero-v3">
@@ -372,7 +475,7 @@
         <h2 class="reveal">You set the direction. We row everything toward it.</h2>
         <p class="prose reveal" style="margin-top: 20px;">Your CPA, your attorney, your banker: one plan, one team holding the full picture, and none of the coordination on your shoulders.</p>
         <div class="wwd-rail-photo reveal" data-parallax-wrap>
-          <img data-parallax src="assets/photo-bridge-vista.jpg" alt="Golden hills and open water seen from a high coastal vista" loading="lazy">
+          <img width="1372" height="896" data-parallax src="assets/photo-bridge-vista-1372.webp" srcset="assets/photo-bridge-vista-800.webp 800w, assets/photo-bridge-vista-1372.webp 1372w" sizes="100vw" alt="Golden hills and open water seen from a high coastal vista" loading="lazy">
         </div>
       </div>
       <div class="svc-index">
@@ -448,7 +551,7 @@
 
   <!-- INTERSTITIAL PHOTO -->
   <div data-parallax-wrap style="height: min(48vh, 480px);" aria-hidden="true">
-    <img data-parallax src="assets/photo-muir-woods.jpg" alt="A path through the redwoods in Muir Woods" style="width: 100%; object-fit: cover; object-position: center 60%;" loading="lazy">
+    <img width="2000" height="1333" data-parallax src="assets/photo-muir-woods-2000.webp" srcset="assets/photo-muir-woods-800.webp 800w, assets/photo-muir-woods-1400.webp 1400w, assets/photo-muir-woods-2000.webp 2000w" sizes="100vw" alt="A path through the redwoods in Muir Woods" style="width: 100%; object-fit: cover; object-position: center 60%;" loading="lazy">
   </div>
 
   <!-- MEET THE TEAM -->
@@ -458,37 +561,37 @@
       <div class="horizon" data-draw aria-hidden="true" style="margin-top: 26px;"></div>
       <div class="team-grid" aria-label="The Aspirean team">
       <a class="team-card" href="team/chris-winkler.html">
-        <img class="team-photo" style="view-transition-name: photo-chris-winkler;" src="assets/team-chris-winkler.jpg" alt="Portrait of Chris Winkler, Founder, Principal at Aspirean Wealth" loading="lazy">
+        <img width="640" height="640" class="team-photo" style="view-transition-name: photo-chris-winkler;" src="assets/team-chris-winkler.webp" alt="Portrait of Chris Winkler, Founder, Principal at Aspirean Wealth" loading="lazy">
         <p class="team-name">Chris Winkler</p>
         <p class="team-role">Founder | Principal</p>
       </a>
       <a class="team-card" href="team/paul-grace.html">
-        <img class="team-photo" style="view-transition-name: photo-paul-grace;" src="assets/team-paul-grace.jpg" alt="Portrait of Paul Grace, Founder, Wealth Manager at Aspirean Wealth" loading="lazy">
+        <img width="640" height="640" class="team-photo" style="view-transition-name: photo-paul-grace;" src="assets/team-paul-grace.webp" alt="Portrait of Paul Grace, Founder, Wealth Manager at Aspirean Wealth" loading="lazy">
         <p class="team-name">Paul Grace</p>
         <p class="team-role">Founder | Wealth Manager</p>
       </a>
       <a class="team-card" href="team/brad-alvarez.html">
-        <img class="team-photo" style="view-transition-name: photo-brad-alvarez;" src="assets/team-brad-alvarez.jpg" alt="Portrait of Brad Alvarez, COO, CCO, Principal at Aspirean Wealth" loading="lazy">
+        <img width="640" height="640" class="team-photo" style="view-transition-name: photo-brad-alvarez;" src="assets/team-brad-alvarez.webp" alt="Portrait of Brad Alvarez, COO, CCO, Principal at Aspirean Wealth" loading="lazy">
         <p class="team-name">Brad Alvarez</p>
         <p class="team-role">COO | CCO | Principal</p>
       </a>
       <a class="team-card" href="team/marian-jung.html">
-        <img class="team-photo" style="view-transition-name: photo-marian-jung;" src="assets/team-marian-jung.jpg" alt="Portrait of Marian Jung, CPA, Wealth Manager, Senior Associate at Aspirean Wealth" loading="lazy">
+        <img width="480" height="480" class="team-photo" style="view-transition-name: photo-marian-jung;" src="assets/team-marian-jung.webp" alt="Portrait of Marian Jung, CPA, Wealth Manager, Senior Associate at Aspirean Wealth" loading="lazy">
         <p class="team-name">Marian Jung, CPA</p>
         <p class="team-role">Wealth Manager | Senior Associate</p>
       </a>
       <a class="team-card" href="team/kevin-ostafinski.html">
-        <img class="team-photo" style="view-transition-name: photo-kevin-ostafinski;" src="assets/team-kevin-ostafinski.jpg" alt="Portrait of Kevin Ostafinski, Advanced Planning Lead at Aspirean Wealth" loading="lazy">
+        <img width="800" height="800" class="team-photo" style="view-transition-name: photo-kevin-ostafinski;" src="assets/team-kevin-ostafinski.webp" alt="Portrait of Kevin Ostafinski, Advanced Planning Lead at Aspirean Wealth" loading="lazy">
         <p class="team-name">Kevin Ostafinski</p>
         <p class="team-role">Advanced Planning Lead</p>
       </a>
       <a class="team-card" href="team/caleb-luis.html">
-        <img class="team-photo" style="view-transition-name: photo-caleb-luis;" src="assets/team-caleb-luis.jpg" alt="Portrait of Caleb Luis, Associate Advisor at Aspirean Wealth" loading="lazy">
+        <img width="800" height="800" class="team-photo" style="view-transition-name: photo-caleb-luis;" src="assets/team-caleb-luis.webp" alt="Portrait of Caleb Luis, Associate Advisor at Aspirean Wealth" loading="lazy">
         <p class="team-name">Caleb Luis</p>
         <p class="team-role">Associate Advisor</p>
       </a>
       <a class="team-card" href="team/marcia-dinges.html">
-        <img class="team-photo" style="view-transition-name: photo-marcia-dinges;" src="assets/team-marcia-dinges.jpg" alt="Portrait of Marcia Dinges, Client Services Director at Aspirean Wealth" loading="lazy">
+        <img width="640" height="640" class="team-photo" style="view-transition-name: photo-marcia-dinges;" src="assets/team-marcia-dinges.webp" alt="Portrait of Marcia Dinges, Client Services Director at Aspirean Wealth" loading="lazy">
         <p class="team-name">Marcia Dinges</p>
         <p class="team-role">Client Services Director</p>
       </a>
@@ -539,7 +642,7 @@
   <!-- CTA -->
   <section class="cta-photo on-ink">
     <div class="cta-media" data-parallax-wrap aria-hidden="true">
-      <img data-parallax src="assets/photo-gg-bridge.jpg" alt="The Golden Gate Bridge above the Marin headlands">
+      <img width="2000" height="1328" data-parallax src="assets/photo-gg-bridge-2000.webp" srcset="assets/photo-gg-bridge-800.webp 800w, assets/photo-gg-bridge-1400.webp 1400w, assets/photo-gg-bridge-2000.webp 2000w" sizes="100vw" alt="The Golden Gate Bridge above the Marin headlands">
     </div>
     <div class="cta-scrim" aria-hidden="true"></div>
     <div class="wrap reveal">
@@ -579,7 +682,7 @@
 <footer class="site-footer on-ink">
   <div class="footer-grid">
     <div class="footer-col">
-      <img src="assets/logo-wordmark-paper.png" alt="Aspirean Wealth">
+      <img width="1568" height="252" src="assets/logo-wordmark-paper.webp" alt="Aspirean Wealth">
       <p style="margin-top: 18px; max-width: 32ch;">Fee-only, fiduciary wealth management for first-generation wealth creators.<sup class="fn-ref">1</sup></p>
       <div class="footer-compliance">
         <a href="/documents/Aspirean-Form_CRS_2026.pdf" target="_blank" rel="noopener">Form CRS</a>
