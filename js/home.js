@@ -1,6 +1,7 @@
 /* Aspirean Wealth - homepage behavior (externalized for strict CSP) */
 
-
+window.Asp = window.Asp || {};
+window.Asp.initHome = function () {
 /* Who we serve: the selector. Three cohorts, one visible at a time,
    because the copy asks the reader to start with the one that sounds
    like them. Accessible tabs; without JS all three read stacked. */
@@ -113,3 +114,6 @@
         scrollTrigger: { trigger: q, start: "top 78%", end: "top 34%", scrub: true } });
   }
 })();
+};
+
+window.Asp.initHome();

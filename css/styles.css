@@ -418,7 +418,8 @@ body.modal-open { overflow: hidden; }
 
 /* ---------- parallax ---------- */
 .hero-media img[data-parallax],
-[data-parallax-wrap] img[data-parallax] { position: relative; top: -8%; height: 116%; will-change: transform; }
+[data-parallax-wrap] img[data-parallax] { position: relative; top: -8%; height: 116%; width: 100%; object-fit: cover; display: block; will-change: transform; }
+.wwd-rail-photo { height: min(44vh, 440px); }
 [data-parallax-wrap] { overflow: hidden; position: relative; }
 
 /* ---------- perspectives / post list ---------- */
@@ -735,3 +736,7 @@ a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
 .office-card p { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.6; margin: 0; }
 .office-card a { color: var(--sage-deep); text-decoration: none; }
 @media (max-width: 900px) { .office-grid { grid-template-columns: 1fr; } }
+
+/* ---------- swup team navigation: fallback fade ---------- */
+html.is-changing .transition-fade { transition: opacity 0.25s ease; }
+html.is-animating .transition-fade { opacity: 0; }
