@@ -9,6 +9,35 @@ https://www.aspirean.com/*             https://aspirean.com/:splat 301!
 # --- legacy blog: specific mappings (populate from the legacy URL list) ---
 # /blog/old-post-slug   /perspectives/new-post-slug.html   301
 
+/blog/anchored-uncertainty   /perspectives/anchored-uncertainty.html   301
+/blog/social-security-insecurity   /perspectives/social-security-insecurity.html   301
+/blog/a-case-for-calm   /perspectives/a-case-for-calm.html   301
+/blog/tariff-trepidation   /perspectives/tariff-trepidation.html   301
+/blog/well-that-escalated-quickly   /perspectives/well-that-escalated-quickly.html   301
+/blog/the-illusion-of-certainty-why-predictions-rarely-pay-off   /perspectives/the-illusion-of-certainty-why-predictions-rarely-pay-off.html   301
+/blog/the-impact-of-elections   /perspectives/the-impact-of-elections.html   301
+/blog/the-cost-of-living-surge-a-comparative-look-at-housing-cars-and-savings-rates-from-1970-to-2022   /perspectives/the-cost-of-living-surge-a-comparative-look-at-housing-cars-and-savings-rates-from-1970-to-2022.html   301
+/blog/deposits-withdrawals-the-foundation-of-abundance   /perspectives/deposits-withdrawals-the-foundation-of-abundance.html   301
+/blog/new-year-new   /perspectives/new-year-new.html   301
+/blog/whats-your-true-net-worth   /perspectives/whats-your-true-net-worth.html   301
+/blog/embracing-uncertainty-this-holiday-season   /perspectives/embracing-uncertainty-this-holiday-season.html   301
+/blog/how-to-have-meaningful-conversations-with-your-family-about-money   /perspectives/how-to-have-meaningful-conversations-with-your-family-about-money.html   301
+/blog/is-the-dollars-global-status-at-risk   /perspectives/is-the-dollars-global-status-at-risk.html   301
+/blog/respect-admiration   /perspectives/respect-admiration.html   301
+/blog/the-science-of-first-world-problems   /perspectives/the-science-of-first-world-problems.html   301
+/blog/ai-and-its-investment-implications   /perspectives/ai-and-its-investment-implications.html   301
+/blog/the-storm-before-the-calm   /perspectives/the-storm-before-the-calm.html   301
+/blog/why-the-wisdom-of-the-market-crowd-beats-ai   /perspectives/why-the-wisdom-of-the-market-crowd-beats-ai.html   301
+/blog/expect-the-unexpected   /perspectives/expect-the-unexpected.html   301
+/blog/people-have-memories-markets-dont   /perspectives/people-have-memories-markets-dont.html   301
+/blog/the-world-is-better-off-than-you-think   /perspectives/the-world-is-better-off-than-you-think.html   301
+/blog/the-case-for-objective-optimism   /perspectives/the-case-for-objective-optimism.html   301
+/blog/the-important-role-a-financial-advisor-plays   /perspectives/the-important-role-a-financial-advisor-plays.html   301
+/blog/aspirean-more-than-a-name   /perspectives/aspirean-more-than-a-name.html   301
+/blog/passion-persistence-patience   /perspectives/passion-persistence-patience.html   301
+/blog/the-gift-of-time   /perspectives/the-gift-of-time.html   301
+/blog/the-only-goals-that-matter   /perspectives/the-only-goals-that-matter.html   301
+
 # --- legacy blog: catch-all so nothing 404s ---
 /blog     /perspectives.html   301
 /blog/*   /perspectives.html   301
