@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiduciary Wealth Management, Marin County | Aspirean Wealth</title>
+<meta name="description" content="Aspirean Wealth provides investment management, tax strategy, and estate planning for people navigating a business exit, equity compensation, or sudden.">
+<meta property="og:title" content="Fiduciary Wealth Management, Marin County | Aspirean Wealth">
+<meta property="og:description" content="Aspirean Wealth provides investment management, tax strategy, and estate planning for people navigating a business exit, equity compensation, or sudden.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aspirean.com/">
+<meta property="og:image" content="https://aspirean.com/assets/og-image.jpg">
+<meta property="og:site_name" content="Aspirean Wealth">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fiduciary Wealth Management, Marin County | Aspirean Wealth">
+<meta name="twitter:description" content="Aspirean Wealth provides investment management, tax strategy, and estate planning for people navigating a business exit, equity compensation, or sudden.">
+<meta name="twitter:image" content="https://aspirean.com/assets/og-image.jpg">
+<link rel="canonical" href="https://aspirean.com/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0735ZEKVJJ"></script>
+<script src="js/analytics.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ---------- homepage layout: v3 ----------
+   Broadsheet hero: headline left, deck right, both settled on the
+   baseline. Who we serve becomes a selector, because the copy says
+   "start with the one that sounds like you." The ink section trades
+   cards for ledger rows. Services read as an index. The page closes
+   on a photograph instead of a panel. */
+
+/* hero: broadsheet grid on the baseline */
+/* hero: one reading gravity. Eyebrow, promise, lead, action in a single
+   column anchored lower-left; the path stays clear on the right. */
+/* full-viewport opening: the hero is all you see on arrival */
+.hero .hero-inner { min-height: 100vh; min-height: 100svh; padding-bottom: clamp(56px, 9vh, 96px); }
+.hero-copy { max-width: 640px; }
+.hero-v3 h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); letter-spacing: -0.015em; }
+.hero h1 .hl { display: block; overflow: hidden; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+.hero h1 .hl-in { display: block; }
+.hero-copy .lead { margin: 26px 0 38px; max-width: 42ch; font-size: 1.15rem; }
+.hero-copy .hero-actions { margin-top: 0; }
+
+/* who we serve: the selector */
+.ptabs {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.ptab {
+  appearance: none; background: none; border: 0; cursor: pointer;
+  text-align: left; font-family: var(--sans);
+  padding: 26px 28px 26px 0; position: relative;
+}
+.ptab + .ptab { padding-left: 28px; border-left: 1px solid var(--rule); }
+.ptab .persona-n { display: block; font-size: 2.4rem; color: var(--ink-faint); padding: 0; margin-bottom: 14px; transition: color 0.3s ease; }
+.ptab .cohort-tag { display: block; margin: 0; color: var(--ink-mid); transition: color 0.3s ease; }
+.ptab::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--sage-deep); transform: scaleX(0); transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ptab + .ptab::after { left: 28px; }
+.ptab:hover .cohort-tag, .ptab:hover .persona-n { color: var(--sage-deep); }
+.ptab:focus-visible { outline: 2px solid var(--sage); outline-offset: -2px; }
+.ptab.is-active .persona-n { color: var(--sage-deep); }
+.ptab.is-active .cohort-tag { color: var(--ink); }
+.ptab.is-active::after { transform: scaleX(1); }
+
+.ppanels { position: relative; }
+.ppanel { padding-top: var(--s-6); }
+.ppanel[hidden] { display: none; }
+.ppanel-grid {
+  display: grid; grid-template-columns: minmax(280px, 5fr) 7fr;
+  gap: clamp(40px, 6vw, 96px); align-items: start;
+}
+.ppanel-rail { position: sticky; top: 110px; }
+.ppanel-rail h3 {
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 400; line-height: 1.2;
+  margin: 0 0 16px; max-width: 20ch; letter-spacing: -0.01em;
+}
+.ppanel-rail .persona-body { color: var(--ink-soft); max-width: 44ch; margin: 0; }
+.wws-label {
+  display: block; font-family: var(--sans); font-size: 0.8125rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.wws-list .qa:first-of-type { border-top: 0; padding-top: 6px; }
+@media (max-width: 900px) {
+  .ptabs { grid-template-columns: 1fr; border-top: 0; }
+  .ptab, .ptab + .ptab { border-left: 0; border-top: 1px solid var(--rule); padding: 18px 0 18px 20px; }
+  .ptab .persona-n { display: inline-block; font-size: 1.4rem; margin: 0 14px 0 0; vertical-align: baseline; }
+  .ptab .cohort-tag { display: inline; }
+  .ptab::after, .ptab + .ptab::after { left: 0; right: auto; top: 0; bottom: 0; width: 2px; height: auto; transform: scaleY(0); transform-origin: top center; }
+  .ptab.is-active::after { transform: scaleY(1); }
+  .ppanel-grid { grid-template-columns: 1fr; gap: var(--s-3); }
+  .ppanel-rail { position: static; }
+}
+
+/* the cost of complexity: ledger rows on ink */
+.cost-ledger {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 56px); margin-top: var(--s-5);
+}
+.cost-row { border-top: 1px solid var(--rule-ink); padding-top: 22px; }
+.cost-row h3 { font-size: var(--step-2); font-weight: 300; color: var(--paper); margin: 0 0 12px; }
+.cost-row p { color: var(--paper-soft); margin: 0; font-size: 0.9688rem; }
+.cost-close { margin-top: var(--s-6); border-top: 1px solid var(--rule-ink); padding-top: var(--s-4); }
+.cost-close p {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.3;
+  color: var(--sage-glow); margin: 0; max-width: 26ch;
+}
+@media (max-width: 900px) {
+  .cost-ledger { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* the thesis, alone on the page */
+.quote-band { padding: var(--s-8) 0; }
+.quote-band .quote-ink { margin: 0 auto; text-align: center; max-width: 22ch; font-size: clamp(2rem, 4vw, 3.4rem); }
+.quote-ink .qw { opacity: 1; }
+
+/* what we do: index rows beside a held rail */
+.wwd-rail-photo { margin-top: var(--s-5); overflow: hidden; border-radius: 2px; aspect-ratio: 4 / 4.6; position: relative; }
+.svc-index .svc:first-of-type { border-top: 0; padding-top: 0; }
+.svc-index .svc { padding: 26px 0; }
+.svc-index .svc h3 { font-size: 1.5rem; }
+@media (max-width: 900px) { .wwd-rail-photo { aspect-ratio: 4 / 3; } }
+
+/* expect: promises */
+.expect-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 56px); margin-top: var(--s-5);
+}
+.expect-grid > div { border-top: 2px solid var(--sage); padding-top: 16px; }
+.expect-grid strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.25rem; color: var(--ink); margin-bottom: 8px; }
+.expect-grid span { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.55; }
+  margin-top: var(--s-6); padding-top: var(--s-4); border-top: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 5vw, 64px);
+}
+@media (max-width: 900px) { .expect-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .expect-grid { grid-template-columns: 1fr; } }
+
+/* how we work: the plan descends */
+.steps-v {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 56px); margin-top: var(--s-5);
+}
+.step-row { border-top: 1px solid var(--rule); padding-top: 22px; }
+.step-row .step-n { font-size: 2.6rem; }
+.step-row h3 { font-size: 1.5rem; font-weight: 400; margin: 10px 0 10px; }
+.step-row p { color: var(--ink-soft); font-size: 0.9688rem; margin: 0; }
+@media (max-width: 900px) { .steps-v { grid-template-columns: 1fr; gap: var(--s-4); } }
+
+/* closing: a photograph, not a panel */
+.cta-photo { position: relative; background: var(--ink); overflow: hidden; }
+.cta-photo .cta-media { position: absolute; inset: 0; }
+.cta-photo .cta-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
+.cta-photo .cta-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.62) 55%, rgba(23,33,27,0.86) 100%); }
+.cta-photo .wrap { position: relative; padding-top: clamp(56px, 8vw, 88px); padding-bottom: clamp(56px, 8vw, 88px); }
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 88px); align-items: center; }
+.cta-photo h2 { margin: 0; max-width: 16ch; color: var(--paper); font-size: var(--step-3); }
+.cta-photo .prose { margin: 0 0 26px; max-width: 48ch; color: var(--paper-soft); }
+@media (max-width: 900px) { .cta-grid { grid-template-columns: 1fr; gap: 26px; } }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Organization",
+    "FinancialService"
+   ],
+   "@id": "https://aspirean.com/#organization",
+   "name": "Aspirean Wealth",
+   "legalName": "Aspirean Wealth, LLC",
+   "url": "https://aspirean.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://aspirean.com/assets/logo-wordmark-ink.png",
+    "width": 1568,
+    "height": 252
+   },
+   "image": "https://aspirean.com/assets/og-image.jpg",
+   "telephone": "(844) 687-5342",
+   "foundingDate": "2014",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Knoll Lane, Suite B",
+    "addressLocality": "Mill Valley",
+    "addressRegion": "CA",
+    "postalCode": "94941",
+    "addressCountry": "US"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/company/aspirean-wealth/",
+    "https://adviserinfo.sec.gov/firm/summary/173138"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aspirean.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How are you paid?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We’re a fee-only Registered Investment Advisor and a fiduciary, paid a percentage of the assets we manage. No commissions, no product sales, no undisclosed revenue. The planning, tax, and estate work is part of the relationship, not an add-on with its own invoice."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you have a minimum?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Given the time-intensive, comprehensive nature of our work, we best serve individuals with at least $1 million in investable assets."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does my money actually live?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At independent custodians, Charles Schwab and Fidelity, in accounts that stay in your name. We’re your advisor with limited authority to manage them, and we don’t work for the custodian. You can see everything, always."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How would you describe your investment strategy?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evidence-based, guided by decades of objective, peer-reviewed financial research and supported by our partnership with Focus Financial. We help you manage what’s actually within your control (cost, diversification, and discipline) rather than react to headlines."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you handle taxes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We do tax planning and strategy. It lives inside your financial plan year-round, led in-house by credentialed expertise, and we work directly with the CPA who files your returns so the plan and the paperwork never drift apart."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens after the first conversation?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We listen first: your goals, your family, what you want the money to do. If we both want to continue, we build one coordinated plan across investments, tax, and estate strategy, then meet on a rhythm that fits your life. And it all begins with a conversation we’d love the opportunity to have."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are you the right fit for us?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We hope so, though we’re not for everyone. If you want a coordinated plan and a partner who takes financial complexity off your plate, we’d like to talk. If you’re looking for ad hoc stock tips, we’re not the right fit."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header header-dark">
+  <a class="brand" href="index.html" aria-label="Aspirean Wealth home">
+    <span class="brand-mark">
+      <img class="mk-paper" src="assets/logo-mark-paper.png" alt="Aspirean Wealth">
+      <img class="mk-sage" src="assets/logo-mark-sage.png" alt="">
+    </span>
+    <span class="brand-words">
+      <img class="ww-paper" src="assets/logo-wordmark-paper.png" alt="">
+      <img class="ww-ink" src="assets/logo-wordmark-ink.png" alt="">
+    </span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="perspectives.html">Perspectives</a>
+      <a href="about.html">About</a>
+    <a class="nav-cta" href="contact.html">Meet with us</a>
+    <a class="nav-portal" href="client-portal.html">Client Portals</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/photo-hero-path.jpg" alt="A railed walkway climbing a coastal ridge into the fog" fetchpriority="high" style="object-position: 60% 45%;">
+    </div>
+    <div class="hero-scrim" aria-hidden="true" style="background: linear-gradient(90deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.22) 44%, rgba(23,33,27,0) 80%), linear-gradient(180deg, rgba(23,33,27,0.32) 0%, rgba(23,33,27,0.04) 34%, rgba(23,33,27,0.42) 70%, rgba(23,33,27,0.9) 100%);"></div>
+    <div class="wrap hero-inner hero-v3">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color: var(--paper); opacity: 0.92;">Fiduciary wealth management</p>
+        <h1>For the moment<br><em>everything</em> changes.</h1>
+        <p class="lead">You sold the business. Your equity finally vested. You&rsquo;re suddenly the one holding it all together. We coordinate investment management, tax strategy, and estate planning for people meeting a major financial turning point.</p>
+        <div class="hero-actions">
+          <a class="btn btn-paper" href="contact.html">Meet with us</a>
+          <a class="link-quiet" style="color: var(--paper); border-color: rgba(246,245,238,0.5);" href="#how-we-work">How we work</a>
+        </div>
+      </div>
+    </div>
+    <div class="horizon" data-draw aria-hidden="true"></div>
+  </section>
+
+  <!-- WHO WE SERVE (selector) -->
+  <section class="section" id="who-we-serve">
+    <div class="wrap split" style="margin-bottom: 56px;">
+      <div class="reveal split-rail">
+        <p class="eyebrow">Who we serve</p>
+        <h2>Wealth built through conviction and confidence.</h2>
+      </div>
+      <p class="prose reveal">You&rsquo;re the one everyone else counts on. The one who built it, the one whose name is on it, the one doing the math at night that nobody else sees. You don&rsquo;t need more information. You need less on your plate, and someone who understands exactly what this moment feels like. Start with the one that sounds like you.</p>
+    </div>
+    <div class="wrap">
+
+      <div class="ptabs reveal" role="tablist" aria-label="Who we serve" data-ptabs>
+        <button class="ptab is-active" type="button" role="tab" id="ptab-1" aria-selected="true" aria-controls="ppanel-1">
+          <span class="persona-n" aria-hidden="true">01</span>
+          <span class="cohort-tag">Founders &amp; Business Owners</span>
+        </button>
+        <button class="ptab" type="button" role="tab" id="ptab-2" aria-selected="false" aria-controls="ppanel-2" tabindex="-1">
+          <span class="persona-n" aria-hidden="true">02</span>
+          <span class="cohort-tag">Equity-Compensated Executives</span>
+        </button>
+        <button class="ptab" type="button" role="tab" id="ptab-3" aria-selected="false" aria-controls="ppanel-3" tabindex="-1">
+          <span class="persona-n" aria-hidden="true">03</span>
+          <span class="cohort-tag">Family Stewards</span>
+        </button>
+      </div>
+
+      <div class="ppanels">
+
+        <div class="ppanel" role="tabpanel" id="ppanel-1" aria-labelledby="ptab-1">
+          <div class="ppanel-grid">
+            <div class="ppanel-rail">
+              <h3>The exit is on the horizon.</h3>
+              <p class="persona-body">A pending LOI, a sale, a recapitalization, or a buyout is ahead of you, and the decisions coming matter more than any you&rsquo;ve made in the last twenty years. We help structure the exit, starting years before the paperwork is signed.</p>
+            </div>
+            <div class="wws-list">
+              <span class="wws-label">Questions we answer</span>
+              <a class="qa" href="perspectives/selling-your-business-tax-planning-before-the-exit.html">
+                <span class="qa-q">&ldquo;I&rsquo;m planning to sell in the next few years. What can I do now to keep more of what I&rsquo;ve built?&rdquo;</span>
+                <span class="qa-blurb">Nearly every strategy worth having, from the QSBS exclusion to pre-sale trust structures, gets weaker as the closing date gets closer.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/business-concentration-when-to-diversify.html">
+                <span class="qa-q">&ldquo;My business is most of my net worth. When should I start diversifying, and how much is enough?&rdquo;</span>
+                <span class="qa-blurb">Concentration built the wealth. The question is what happens to your family if the bet has a bad decade.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/after-the-sale-making-the-proceeds-last.html">
+                <span class="qa-q">&ldquo;The sale closed. How do I make this money last the rest of my life?&rdquo;</span>
+                <span class="qa-blurb">The skills that built the company are nearly the opposite of the skills that preserve the proceeds.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="case-studies/section-1202-qsbs.html">
+                <span class="qa-q">Case study: Section 1202 QSBS at exit</span>
+                <span class="qa-blurb">Over $12 million in capital gains taxes saved at closing, planned years before the paperwork was signed.</span>
+                <span class="qa-read">Read the case study</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ppanel" role="tabpanel" id="ppanel-2" aria-labelledby="ptab-2">
+          <div class="ppanel-grid">
+            <div class="ppanel-rail">
+              <h3>Every quarter, a little more of your future lands on one stock.</h3>
+              <p class="persona-body">You&rsquo;ve meant to deal with it for six open windows in a row. Not because you lack discipline, but because unvested grants, narrow trading windows, and the fear that selling signals doubt in your own company make timing feel impossible. So your future doesn&rsquo;t depend on your employer&rsquo;s next earnings call.</p>
+            </div>
+            <div class="wws-list">
+              <span class="wws-label">Questions we answer</span>
+              <a class="qa" href="perspectives/concentrated-company-stock-how-much-is-too-much.html">
+                <span class="qa-q">&ldquo;The stock keeps vesting and keeps climbing. How concentrated is too concentrated?&rdquo;</span>
+                <span class="qa-blurb">An RSU is taxed at vest, so holding the shares is an active decision to buy them, every quarter.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/10b5-1-plans-diversifying-as-an-insider.html">
+                <span class="qa-q">&ldquo;I want to diversify, but I&rsquo;m an insider. How do I sell without tripping over trading windows?&rdquo;</span>
+                <span class="qa-blurb">A Rule 10b5-1 plan replaces window-by-window decisions with a pre-committed schedule.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/iso-exercises-and-the-amt.html">
+                <span class="qa-q">&ldquo;My ISOs are in the money. Should I exercise, and why does everyone warn me about the AMT?&rdquo;</span>
+                <span class="qa-blurb">The spread at exercise drives everything: the tax toll, the timing, and whether the prize is worth the road.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="case-studies/rsu-strategy.html">
+                <span class="qa-q">Case study: Unwinding a 90 percent RSU concentration</span>
+                <span class="qa-blurb">A single-stock position on a managed path from roughly 90 percent of the portfolio toward 20, without handing the difference to the IRS.</span>
+                <span class="qa-read">Read the case study</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ppanel" role="tabpanel" id="ppanel-3" aria-labelledby="ptab-3">
+          <div class="ppanel-grid">
+            <div class="ppanel-rail">
+              <h3>Suddenly, you&rsquo;re the one who has to know.</h3>
+              <p class="persona-body">Maybe you lost the person who handled it all. Maybe it simply landed in your lap. Either way, the gap isn&rsquo;t competence, it&rsquo;s context nobody handed you. We step in as your partner through the complexity, building that context with you, in plain language, until you feel steady again.</p>
+            </div>
+            <div class="wws-list">
+              <span class="wws-label">Questions we answer</span>
+              <a class="qa" href="perspectives/sudden-wealth-the-first-year.html">
+                <span class="qa-q">&ldquo;It&rsquo;s suddenly mine to manage. What actually needs to happen in the first year?&rdquo;</span>
+                <span class="qa-blurb">Almost nothing is as urgent as it feels. The short list of real deadlines, and the long list that can wait.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/turning-assets-into-income.html">
+                <span class="qa-q">&ldquo;How do we turn what we have into income we can count on?&rdquo;</span>
+                <span class="qa-blurb">Income isn&rsquo;t something you buy. It&rsquo;s built from a spending rate, a cash buffer, and a withdrawal order.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="perspectives/taking-over-the-family-finances.html">
+                <span class="qa-q">&ldquo;My spouse handled everything. How do I take this over without an expensive mistake?&rdquo;</span>
+                <span class="qa-blurb">A context problem, not a competence problem. The inventory, the audit, and the standard to hold every advisor to.</span>
+                <span class="qa-read">Read the answer</span>
+              </a>
+              <a class="qa" href="case-studies/taking-over-the-family-finances.html">
+                <span class="qa-q">Case study: Taking over the family finances</span>
+                <span class="qa-blurb">From a financial life she was never asked to manage to one she understands and runs with confidence.</span>
+                <span class="qa-read">Read the case study</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE COST OF COMPLEXITY -->
+  <section class="section section-ink on-ink" id="cost-of-complexity">
+    <div class="wrap split" style="margin-bottom: 8px;">
+      <div class="reveal">
+        <p class="eyebrow">The cost of complexity</p>
+        <h2>Your wealth shouldn&rsquo;t create more of a burden.</h2>
+      </div>
+      <p class="prose reveal" style="max-width: 52ch;">As your wealth has grown, so has the work of managing it. Somewhere along the way you became the messenger between your CPA, your attorney, and your advisor. That comes at a price.</p>
+    </div>
+    <div class="wrap">
+      <div class="cost-ledger">
+        <div class="cost-row">
+          <h3>Lost time</h3>
+          <p>Every hour spent relaying, reconciling, and re-explaining between professionals is an hour that belonged to your family, your work, or your life.</p>
+        </div>
+        <div class="cost-row">
+          <h3>Feeling stuck</h3>
+          <p>When everything is a priority, nothing moves. The important calls pile up quietly behind the urgent ones, some of them for years.</p>
+        </div>
+        <div class="cost-row">
+          <h3>Expensive mistakes</h3>
+          <p>Professionals working in silos means avoidable taxes, duplicated fees, and opportunities that expired because nobody owned them.</p>
+        </div>
+      </div>
+      <div class="cost-close reveal">
+        <p>The fix isn&rsquo;t more advice. It&rsquo;s coordination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section" id="what-we-do">
+    <div class="wrap split">
+      <div class="split-rail">
+        <p class="eyebrow reveal">What we do</p>
+        <h2 class="reveal">You set the direction. We row everything toward it.</h2>
+        <p class="prose reveal" style="margin-top: 20px;">Your CPA, your attorney, your banker: one plan, one team holding the full picture, and none of the coordination on your shoulders.</p>
+        <div class="wwd-rail-photo reveal" data-parallax-wrap>
+          <img data-parallax src="assets/photo-bridge-vista.jpg" alt="Golden hills and open water seen from a high coastal vista" loading="lazy">
+        </div>
+      </div>
+      <div class="svc-index">
+        <div class="svc">
+          <h3>Investment Management</h3>
+          <p>Evidence-based portfolios built for your goals, not this quarter&rsquo;s headlines.</p>
+        </div>
+        <div class="svc">
+          <h3>Financial Planning</h3>
+          <p>A living plan for the decisions in front of you: exits, equity, income, education, the freedom to make a change.</p>
+        </div>
+        <div class="svc">
+          <h3>Tax Planning &amp; Coordination</h3>
+          <p>In-house tax expertise working with your CPA, so April stops bringing surprises.</p>
+        </div>
+        <div class="svc">
+          <h3>Estate &amp; Legacy Planning</h3>
+          <p>Your intentions, documented, coordinated with your attorney, and carried across generations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU CAN EXPECT -->
+  <section class="section section-mist" id="expect">
+    <div class="wrap">
+      <p class="eyebrow reveal">What you can expect from us</p>
+      <div class="expect-grid">
+        <div><strong>A rigorous, academic approach</strong><span>Evidence-based strategies built for your long-term goals, not this quarter&rsquo;s headlines.</span></div>
+        <div><strong>A fiduciary commitment</strong><span>Your best interest is our only bias, in writing.</span></div>
+        <div><strong>National resources</strong><span>Supported by our partnership with Focus Financial, custodied at Charles Schwab and Fidelity.<sup class="fn-ref">3</sup></span></div>
+        <div><strong>Sustainable investing options</strong><span>A portfolio that reflects your values without giving up performance.</span></div>
+        <div><strong>Coordinated relationships</strong><span>We work directly with your attorneys and advisors, never in a silo.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section" id="how-we-work">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">How we work</p>
+        <h2 style="max-width: 22ch;">Your plan, designed, built, and protected.</h2>
+      </div>
+      <div class="steps-v">
+        <div class="step-row">
+          <div class="step-n">01</div>
+          <div>
+            <h3>Design</h3>
+            <p>We start by listening: your goals, your family, and what you actually want this wealth to do for your life.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-n">02</div>
+          <div>
+            <h3>Build</h3>
+            <p>You get one coordinated plan across investments, tax, and estate strategy, grounded in decades of Nobel-recognized research.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-n">03</div>
+          <div>
+            <h3>Protect</h3>
+            <p>We meet on a rhythm that fits your life, adjust for what&rsquo;s changed, and make sure nothing falls through the cracks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="margin-top: var(--s-5);">
+        <a class="btn" href="contact.html">Meet with us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERSTITIAL PHOTO -->
+  <div data-parallax-wrap style="height: min(48vh, 480px);" aria-hidden="true">
+    <img data-parallax src="assets/photo-muir-woods.jpg" alt="A path through the redwoods in Muir Woods" style="width: 100%; object-fit: cover; object-position: center 60%;" loading="lazy">
+  </div>
+
+  <!-- MEET THE TEAM -->
+  <section class="section" id="team">
+    <div class="wrap">
+      <h2 class="reveal">Our team</h2>
+      <div class="horizon" data-draw aria-hidden="true" style="margin-top: 26px;"></div>
+      <div class="team-grid" aria-label="The Aspirean team">
+      <a class="team-card" href="team/chris-winkler.html">
+        <img class="team-photo" style="view-transition-name: photo-chris-winkler;" src="assets/team-chris-winkler.jpg" alt="Portrait of Chris Winkler, Founder, Principal at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Chris Winkler</p>
+        <p class="team-role">Founder | Principal</p>
+      </a>
+      <a class="team-card" href="team/paul-grace.html">
+        <img class="team-photo" style="view-transition-name: photo-paul-grace;" src="assets/team-paul-grace.jpg" alt="Portrait of Paul Grace, Founder, Wealth Manager at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Paul Grace</p>
+        <p class="team-role">Founder | Wealth Manager</p>
+      </a>
+      <a class="team-card" href="team/brad-alvarez.html">
+        <img class="team-photo" style="view-transition-name: photo-brad-alvarez;" src="assets/team-brad-alvarez.jpg" alt="Portrait of Brad Alvarez, COO, CCO, Principal at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Brad Alvarez</p>
+        <p class="team-role">COO | CCO | Principal</p>
+      </a>
+      <a class="team-card" href="team/marian-jung.html">
+        <img class="team-photo" style="view-transition-name: photo-marian-jung;" src="assets/team-marian-jung.jpg" alt="Portrait of Marian Jung, CPA, Wealth Manager, Senior Associate at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Marian Jung, CPA</p>
+        <p class="team-role">Wealth Manager | Senior Associate</p>
+      </a>
+      <a class="team-card" href="team/kevin-ostafinski.html">
+        <img class="team-photo" style="view-transition-name: photo-kevin-ostafinski;" src="assets/team-kevin-ostafinski.jpg" alt="Portrait of Kevin Ostafinski, Advanced Planning Lead at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Kevin Ostafinski</p>
+        <p class="team-role">Advanced Planning Lead</p>
+      </a>
+      <a class="team-card" href="team/caleb-luis.html">
+        <img class="team-photo" style="view-transition-name: photo-caleb-luis;" src="assets/team-caleb-luis.jpg" alt="Portrait of Caleb Luis, Associate Advisor at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Caleb Luis</p>
+        <p class="team-role">Associate Advisor</p>
+      </a>
+      <a class="team-card" href="team/marcia-dinges.html">
+        <img class="team-photo" style="view-transition-name: photo-marcia-dinges;" src="assets/team-marcia-dinges.jpg" alt="Portrait of Marcia Dinges, Client Services Director at Aspirean Wealth" loading="lazy">
+        <p class="team-name">Marcia Dinges</p>
+        <p class="team-role">Client Services Director</p>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="padding-top: var(--s-6);">
+    <div class="wrap split">
+      <div class="split-rail reveal">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>The things you&rsquo;re probably wondering.</h2>
+      </div>
+      <div class="reveal">
+        <details class="faq-item">
+          <summary>How are you paid?</summary>
+          <div class="faq-body"><p>We&rsquo;re a fee-only Registered Investment Advisor and a fiduciary, paid a percentage of the assets we manage. No commissions, no product sales, no undisclosed revenue. The planning, tax, and estate work is part of the relationship, not an add-on with its own invoice.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you have a minimum?</summary>
+          <div class="faq-body"><p>Yes. Given the time-intensive, comprehensive nature of our work, we best serve individuals with at least $1 million in investable assets.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Where does my money actually live?</summary>
+          <div class="faq-body"><p>At independent custodians, Charles Schwab and Fidelity, in accounts that stay in your name. We&rsquo;re your advisor with limited authority to manage them, and we don&rsquo;t work for the custodian. You can see everything, always.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How would you describe your investment strategy?</summary>
+          <div class="faq-body"><p>Evidence-based, guided by decades of objective, peer-reviewed financial research and supported by our partnership with Focus Financial. We help you manage what&rsquo;s actually within your control (cost, diversification, and discipline) rather than react to headlines.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you handle taxes?</summary>
+          <div class="faq-body"><p>We do tax planning and strategy. It lives inside your financial plan year-round, led in-house by credentialed expertise, and we work directly with the CPA who files your returns so the plan and the paperwork never drift apart.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens after the first conversation?</summary>
+          <div class="faq-body"><p>We listen first: your goals, your family, what you want the money to do. If we both want to continue, we build one coordinated plan across investments, tax, and estate strategy, then meet on a rhythm that fits your life. And it all begins with a conversation we&rsquo;d love the opportunity to have.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Are you the right fit for us?</summary>
+          <div class="faq-body"><p>We hope so, though we&rsquo;re not for everyone. If you want a coordinated plan and a partner who takes financial complexity off your plate, we&rsquo;d like to talk. If you&rsquo;re looking for ad hoc stock tips, we&rsquo;re not the right fit.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-photo on-ink">
+    <div class="cta-media" data-parallax-wrap aria-hidden="true">
+      <img data-parallax src="assets/photo-gg-bridge.jpg" alt="The Golden Gate Bridge above the Marin headlands">
+    </div>
+    <div class="cta-scrim" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <div class="cta-grid">
+        <div>
+          <p class="eyebrow">Meet with us</p>
+          <h2>We&rsquo;d love to meet with you.</h2>
+        </div>
+        <div>
+          <p class="prose">We take on a limited number of new families each year, on purpose. It&rsquo;s the only way we know to give each one the depth of attention a major financial moment deserves. If yours is approaching, we&rsquo;d love the opportunity to talk with you.</p>
+          <a class="btn" href="contact.html">Begin a conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <!-- OFFICES (compact) -->
+  <div class="offices-mini">
+    <div class="offices-mini-grid">
+      <div>
+        <h3>Mill Valley, CA</h3>
+        <p>6 Knoll Lane, Suite B, Mill Valley, CA 94941<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+      <div>
+        <h3>St. Joseph, MI</h3>
+        <p>505 Pleasant St, Suite 401, St. Joseph, MI 49085<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+      <div>
+        <h3>Chesterton, IN</h3>
+        <p>160 Rail Rd, Suite 4, Chesterton, IN 46304<br><a href="tel:+18446875342">(844) 687-5342</a></p>
+      </div>
+    </div>
+  </div>
+
+<footer class="site-footer on-ink">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="assets/logo-wordmark-paper.png" alt="Aspirean Wealth">
+      <p style="margin-top: 18px; max-width: 32ch;">Fee-only, fiduciary wealth management for first-generation wealth creators.<sup class="fn-ref">1</sup></p>
+      <div class="footer-compliance">
+        <a href="/documents/Aspirean-Form_CRS_2026.pdf" target="_blank" rel="noopener">Form CRS</a>
+        <a href="/documents/Aspirean-Privacy-Policy-2025.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="/documents/Aspirean-Firm-Disclosures-2026.pdf" target="_blank" rel="noopener">Firm Disclosure</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Firm</h4>
+      <a href="#what-we-do">What we do</a>
+      <a href="#who-we-serve">Who we serve</a>
+      <a href="#how-we-work">How we work</a>
+      <a href="#team">Team</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wealth Management</h4>
+      <a href="wealth-management-marin.html">Marin County, CA</a>
+      <a href="wealth-management-st-joseph.html">St. Joseph, MI</a>
+      <a href="wealth-management-chesterton.html">Chesterton, IN</a>
+    </div>
+    <div class="footer-col">
+      <h4>Financial Advisors</h4>
+      <a href="financial-advisors-marin.html">Marin County, CA</a>
+      <a href="financial-advisors-st-joseph.html">St. Joseph, MI</a>
+      <a href="financial-advisors-chesterton.html">Chesterton, IN</a>
+    </div>
+  </div>
+  <p class="footer-risk">No investment strategy can guarantee success or eliminate the risk of loss.</p>
+  <p class="footer-risk footer-legal">All investing involves risk, including the possible loss of principal. Aspirean Wealth LLC is an SEC-registered investment adviser. Registration does not imply a certain level of skill or training. The information contained on this website is provided for informational purposes only and should not be construed as personalized investment, tax, legal, or accounting advice. Advisory services are only offered to clients pursuant to a written advisory agreement. Past performance does not guarantee future results.</p>
+  <div class="footer-line">
+    <p>Independent. Fiduciary. Fee-only.</p>
+    <p>&copy; 2026 Aspirean Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
