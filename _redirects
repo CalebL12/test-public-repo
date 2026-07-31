@@ -6,6 +6,8 @@
 https://test-public-repo.netlify.app/* https://aspirean.com/:splat 301!
 https://www.aspirean.com/*             https://aspirean.com/:splat 301!
 
+/team.html   /index.html#team   301
+
 # --- legacy blog: specific mappings (populate from the legacy URL list) ---
 # /blog/old-post-slug   /perspectives/new-post-slug.html   301
 

@@ -705,3 +705,11 @@ a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
 @media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .team-grid { gap: 16px; } }
 .team-grid a.team-card { display: block; text-decoration: none; }
+
+/* smooth cross-page transitions (progressive enhancement) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.28s; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+
+.article-meta a.author-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.article-meta a.author-link:hover { color: var(--sage-deep); border-bottom-color: var(--sage); }
