@@ -1,6 +1,7 @@
 /* Aspirean Wealth — shared behavior.
    One orchestrated hero moment, quiet scroll reveals, nothing fidgety. */
 (function () {
+  if ("scrollRestoration" in history) history.scrollRestoration = "auto";
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const header = document.querySelector(".site-header");
 

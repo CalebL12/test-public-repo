@@ -713,3 +713,6 @@ a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
 
 .article-meta a.author-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
 .article-meta a.author-link:hover { color: var(--sage-deep); border-bottom-color: var(--sage); }
+
+/* anchor landings clear the fixed header */
+#team, #who-we-serve, #what-we-do, #how-we-work, #faq, #expect { scroll-margin-top: 92px; }
