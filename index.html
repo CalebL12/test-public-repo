@@ -156,7 +156,7 @@
 /* closing: a photograph, not a panel */
 .cta-photo { position: relative; background: var(--ink); overflow: hidden; }
 .cta-photo .cta-media { position: absolute; inset: 0; }
-.cta-photo .cta-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
+.cta-photo .cta-media img { width: 100%; height: 116%; position: relative; top: -8%; object-fit: cover; object-position: 35% 68%; }
 .cta-photo .cta-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,33,27,0.55) 0%, rgba(23,33,27,0.62) 55%, rgba(23,33,27,0.86) 100%); }
 .cta-photo .wrap { position: relative; padding-top: clamp(56px, 8vw, 88px); padding-bottom: clamp(56px, 8vw, 88px); }
 .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 88px); align-items: center; }
@@ -643,7 +643,7 @@
   <!-- CTA -->
   <section class="cta-photo on-ink">
     <div class="cta-media" data-parallax-wrap aria-hidden="true">
-      <img width="2000" height="1328" data-parallax src="assets/photo-gg-bridge-2000.webp" srcset="assets/photo-gg-bridge-800.webp 800w, assets/photo-gg-bridge-1400.webp 1400w, assets/photo-gg-bridge-2000.webp 2000w" sizes="100vw" alt="The Golden Gate Bridge above the Marin headlands">
+      <img width="2000" height="1328" data-parallax="2" src="assets/photo-gg-bridge-2000.webp" srcset="assets/photo-gg-bridge-800.webp 800w, assets/photo-gg-bridge-1400.webp 1400w, assets/photo-gg-bridge-2000.webp 2000w" sizes="100vw" alt="The Golden Gate Bridge above the Marin headlands">
     </div>
     <div class="cta-scrim" aria-hidden="true"></div>
     <div class="wrap reveal">

@@ -128,8 +128,10 @@
     /* photos drift slightly against the scroll */
     gsap.utils.toArray("img[data-parallax]").forEach(function (img) {
       var wrap = img.closest("[data-parallax-wrap]") || img.parentElement;
-      gsap.fromTo(img, { yPercent: -6 }, {
-        yPercent: 6, ease: "none", force3D: true,
+      var amp = parseFloat(img.getAttribute("data-parallax"));
+      if (!(amp > 0)) amp = 6;
+      gsap.fromTo(img, { yPercent: -amp }, {
+        yPercent: amp, ease: "none", force3D: true,
         scrollTrigger: { trigger: wrap, start: "top bottom", end: "bottom top", scrub: 1.4 },
       });
     });
