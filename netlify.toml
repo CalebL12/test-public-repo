@@ -24,9 +24,25 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Assets revalidate on each visit (cheap 304s via Netlify etags), so
-# replaced images appear immediately after a deploy without cache confusion.
+# Images: cached for a year. Discipline this relies on: when an image
+# is REPLACED, give it a new filename (photo-x-1400-v2.webp) and update
+# the HTML - never overwrite an image in place, or visitors keep the
+# old one for up to a year.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS and JS: cached for a year. Every HTML reference carries a version
+# query (styles.css?v=YYYYMMDD). When css/js changes, bump the version
+# in the HTML and browsers fetch fresh immediately; HTML itself is
+# never long-cached, so the bump propagates on the next page load.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
