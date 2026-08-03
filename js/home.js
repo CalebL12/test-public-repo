@@ -70,6 +70,7 @@ window.Asp.initHome = function () {
 
   /* grouped arrivals: rows enter as one gesture */
   function batch(sel, trigger) {
+    if (!document.querySelector(trigger)) return;
     gsap.from(sel, {
       y: 28, opacity: 0, duration: 0.7, ease: "power2.out", stagger: 0.12,
       scrollTrigger: { trigger: trigger, start: "top 78%", once: true }

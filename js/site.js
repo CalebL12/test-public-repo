@@ -14,7 +14,8 @@
   };
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  Asp.initPage = function () {
+  Asp.initPage = function (opts) {
+    opts = opts || {};
     onScroll();
 
     /* mobile nav */
@@ -79,14 +80,17 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    /* hero: one choreographed arrival + slow Ken Burns drift */
+    /* hero: one choreographed arrival + slow Ken Burns drift.
+       Skipped on swup swaps - the view transition is the arrival. */
     var heroTitle = document.querySelector(".hero h1, .page-hero h1");
-    if (heroTitle) {
+    if (heroTitle && !opts.swap) {
       var tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
       tl.from(".hero .eyebrow, .page-hero .eyebrow", { y: 18, opacity: 0 })
         .from(".hero h1, .page-hero h1", { y: 40, opacity: 0 }, "-=0.55")
-        .from(".hero .lead, .page-hero .lead", { y: 24, opacity: 0 }, "-=0.6")
-        .from(".hero-actions", { y: 16, opacity: 0 }, "-=0.55");
+        .from(".hero .lead, .page-hero .lead", { y: 24, opacity: 0 }, "-=0.6");
+      if (document.querySelector(".hero-actions")) {
+        tl.from(".hero-actions", { y: 16, opacity: 0 }, "-=0.55");
+      }
 
       /* Ken Burns only on the homepage hero, not interior photo heroes */
       var heroImg = document.querySelector(".hero .hero-media img");
@@ -117,8 +121,12 @@
       });
     });
 
-    /* quiet reveals, once each */
+    /* quiet reveals, once each. On swup swaps, content already in the
+       viewport arrived via the transition - only below-fold elements
+       still reveal on scroll, so nothing appears twice. */
+    var baseY = (opts.viewportY != null) ? opts.viewportY : window.scrollY;
     gsap.utils.toArray(".reveal").forEach(function (el) {
+      if (opts.swap && (el.getBoundingClientRect().top + window.scrollY) < baseY + window.innerHeight * 0.95) return;
       gsap.from(el, {
         y: 36, opacity: 0, duration: 0.8, ease: "power3.out",
         scrollTrigger: { trigger: el, start: "top 82%", once: true },

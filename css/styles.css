@@ -738,5 +738,16 @@ a.fn-link:hover .fn-ref { opacity: 1; color: var(--sage-deep); }
 @media (max-width: 900px) { .office-grid { grid-template-columns: 1fr; } }
 
 /* ---------- swup team navigation: fallback fade ---------- */
-html.is-changing .transition-fade { transition: opacity 0.25s ease; }
-html.is-animating .transition-fade { opacity: 0; }
+html.is-changing:not(.swup-native) .transition-fade { transition: opacity 0.25s ease; }
+html.is-animating:not(.swup-native) .transition-fade { opacity: 0; }
+
+/* ---------- advisor pager ---------- */
+.advisor-pager { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 28px; }
+.advisor-pager a { text-decoration: none; }
+.advisor-pager .next { text-align: right; }
+.pager-label { display: block; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 6px; }
+.pager-name { display: block; font-size: 1.15rem; color: var(--ink); }
+.pager-role { display: block; font-family: var(--sans); font-size: 0.8125rem; color: var(--ink-mid); margin-top: 2px; }
+.advisor-pager .all { font-family: var(--sans); font-size: 0.8125rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); }
+.advisor-pager a:hover .pager-name, .advisor-pager .all:hover { color: var(--forest, #2E4636); }
+@media (max-width: 700px) { .advisor-pager { grid-template-columns: 1fr 1fr; } .advisor-pager .all { display: none; } }
